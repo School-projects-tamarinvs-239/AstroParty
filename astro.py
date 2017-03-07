@@ -83,7 +83,6 @@ class Player(cocos.layer.Layer):
 		self.keys.add(keys)
 		
 		#BOMB
-		
 		if (key.LEFT in self.keys and self.name=='red')or (key.A in self.keys and self.name=='blue'):
 			if self.bomb == self.maxbomb:
 				self.sprite.do(Delay(self.timereload)+CallFunc(self.reload))
