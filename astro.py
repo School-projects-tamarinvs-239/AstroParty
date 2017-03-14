@@ -62,6 +62,8 @@ class Player(cocos.layer.Layer):
 		self.maxbomb=3
 		self.timereload=5
 		
+		sprite.do(ScaleTo(500, 2))
+		
 		self.sprite.do(Repeat(Delay(0.001)+CallFunc(self.phizic)))
 		
 	def reload(self):
