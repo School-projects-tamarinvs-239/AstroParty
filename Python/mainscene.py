@@ -28,7 +28,7 @@ def __init__(self):
 		self.all_build_object('Player',100,100,0)
 		
 		self.do(Repeat(Delay(0.001)+CallFunc(self.CONTROL)))
-	def all_build_object (self,vid,x,y,rot=0,form_sten=0):#degree
+	def all_build_object (self,vid,x,y,rot=0,form_sten=0):
 		self.object_inform(vid,x,y,rot,form_sten)
 		self.do(Delay(0.001))
 		self.make_object (self.object_inf[len(self.object)],rot,form_sten)

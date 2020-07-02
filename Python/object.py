@@ -46,7 +46,7 @@ class MainScene(cocos.scene.Scene):
 		self.all_build_object('Player',100,100,0)
 		
 		self.do(Repeat(Delay(0.001)+CallFunc(self.CONTROL)))
-	def all_build_object (self,vid,x,y,rot=0,form_sten=0):#degree
+	def all_build_object (self,vid,x,y,rot=0,form_sten=0):
 		self.object_inform(vid,x,y,rot,form_sten)
 		self.do(Delay(0.001))
 		self.make_object (self.object_inf[len(self.object)],rot,form_sten)
@@ -320,7 +320,7 @@ class Bonus (cocos.layer.Layer):
 	def phizic (self):
 		x, y = self.bonus.position
 		if self.number in self.parent.object_die_number:
-			self.remove(sel f.bonus)
+			self.remove(self.bonus)
 			#Vibor vida
 			vids = ['Revers']
 			if self.inf[0] == 'Bonus':
